@@ -654,7 +654,7 @@ public class WebAnnoCasUtil
         }
         
         for (Sentence sentence : select(aJcas, Sentence.class)) {
-            if (sentence.getBegin() <= aBeginOffset && aBeginOffset <= sentence.getEnd()) {
+            if (sentence.getBegin() <= aBeginOffset && aBeginOffset < sentence.getEnd()) {
                 sentenceNumber++;
                 break;
             }
